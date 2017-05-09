@@ -1,11 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="images/abode.jpg" type="image/x-icon">
     <meta charset="UTF-8">
     <title>Abode Picturestop</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
+<ul id="navbar">
+    <li>
+        <img src="images/abode.jpg" width="45" height="45" >
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">File</a>
+        <div class="dropdown-content">
+            <a href="#"><input type="file" id="imageLoader" name="imageLoader"/></a>
+            <a id="downloadLnk" download="untitled.jpg">Save</a>
+            <a onclick="revert()">Revert</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Filters</a>
+        <div class="dropdown-content">
+            <a onclick="grayscale()">Black & White</a>
+            <a href="#">Tint*</a>
+            <a onclick="invert()">Invert</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Effects</a>
+        <div class="dropdown-content">
+            <a onclick="draw()">Draw*</a>
+            <a onclick="addText()">Text</a>
+            <a href="#">Layer*</a>
+        </div>
+    </li>
+</ul>
+
 <canvas id="myCanvas" width="500" height="500"></canvas>
+
+<label>Enter Text:</label><br/>
+<input type="text" id="textEntry"/>
+<label>Text Color:</label>
+<input type="color" id="textColor" value="#ff0000">
+<script src="script.js"></script>
+
 </body>
 </html>
